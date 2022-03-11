@@ -64,4 +64,18 @@ Movie Genre :     [Adventure Fantastic Drama Action]
 
 ## Diving into code
 
-The program uses command-line arguments which are one of the best ways to create parameters for programs during execution. 
+* The program uses command-line arguments which are one of the best ways to create parameters for programs during execution.
+* Structs are used in order to create movies. Fields of the movies are **movie name (string)**, **movie director (string)**, **movie year (int)**, **movie rating (float64)** and **movie genre ([]string)**.
+* Moreover, there are four function in program. Two of them are **list** and **search** which are explianed above in term of functionality.
+* On the other hand, other two functions are **movieNameCreatorFromArgs** and **commandListOrSearch**. The first one takes command-line arguments from console and concatenate them to create single string value (movie name). In Go programming language, command-line arguments, aka. **os.Args**, are in list form. What we write in command-line as arguments are slice elements. 0th element of that list is nothing but name of the program. Therefore, we use the elements starting from 1st element which is 1st element in command-line arguments as well. Furthermore, first element of the arguments is **command** which can be **list** or **search**. The other elements will become movie name. The other function, **commandListOrSearch**, decides what command will be applied by taking first element of arguments.
+* Finally, movies are stored in slice. However, there can be different types in order to store movies like array, dictionary or JSON file as well.
+
+---------------------------------------------
+
+## Conclusion
+
+* The program is very simple which has 2 functionalities. There would be different features like add movie or delete movie. 
+* Error cases are considered in the program. Any commands other than **list** and **search** will cause an error message.
+* The command-line arguments are not case sensetive. For instance, **go run main.go search Fight Club** and **go run main.go search FiGhT ClUb** are same for the program.
+
+---------------------------------------------
